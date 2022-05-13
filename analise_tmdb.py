@@ -46,9 +46,14 @@ plt.show()
 total_de_lingua_de_outros_filmes = tmdb.query("original_language != 'en'").original_language.value_counts() # irá nos mostrar a contagem de todas as linguas menos o ingles.
 # print(total_de_lingua_de_outros_filmes)
 
-
 filmes_sem_lingua_original_em_ingles = tmdb.query("original_language != 'en'")
-sns.catplot(x = "original_language", kind="count", data= filmes_sem_lingua_original_em_ingles)
+# sns.catplot(x = "original_language", kind="count", data= filmes_sem_lingua_original_em_ingles, aspect = 2 )# Catplot é uma função de alto nível. com isso podemos usar um parametro chamado ASPECT que com ele podemos aumentar a visualização do grafico.
+# sns.catplot(x = "original_language", kind="count", data= filmes_sem_lingua_original_em_ingles, aspect = 2 , order = total_de_lingua_de_outros_filmes.index)# Podemos usar um parametro chamado ORDER para ordenar nosso grafico do maior para o menor.
+sns.catplot(x = "original_language", kind="count", data= filmes_sem_lingua_original_em_ingles, aspect = 2 , order = total_de_lingua_de_outros_filmes.index, palette = "GnBu_d")# Podemos usar um parametro chamado PALETTE para que seja alterada a cor de nosso grafico.
 plt.title("Linguas Originail de filmes")
 plt.show()
+
+#Colocando dois graficos dentro de um apanes.
+
+
 
