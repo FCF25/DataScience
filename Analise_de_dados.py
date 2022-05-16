@@ -6,7 +6,7 @@ import seaborn as sns
 # ANALISANDO AS NOTAS EM GERAL
 
 # Atribuimos todos os dados para a variavél notas. com isso podemos ajustar para apresentar apenas a quantidade que queremos.
-pd.set_option('display.max_rows', 1000)
+# pd.set_option('display.max_rows', 1000)
 # Se colocarmos desta maneira irá mostrar todos nosso arquivo .csv print(pd.read_csv('dados/ratings.csv'))
 
 notas = pd.read_csv('dados/ratings.csv')
